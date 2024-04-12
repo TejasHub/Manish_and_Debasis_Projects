@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+        <lightning-tabset>
+            <lightning-tab label="Property Details">
+                <div class="slds-p-around_medium">
+                    <c-my-property-details property={property} property-found={propertyFound}></c-my-property-details>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="Pricing Details">
+                <div class="slds-p-around_medium">
+                    <c-my-property-pricing property={property} property-found={propertyFound}></c-my-property-pricing>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="Owner Details">
+                <div class="slds-p-around_medium">
+                    <template if:true={propertyFound}>
+                     <c-property-owner property-owner-id={property.Property_Owner__c}></c-property-owner>
+                    </template>
+                 </div>
+            </lightning-tab>
+            <lightning-tab label="Property Video">
+                <div class="slds-p-around_medium">
+                    <template if:true={propertyFound}>
+                     <c-my-property-video property={property.Property_Video_URL__c}></c-my-property-video>
+                    </template>
+                 </div>
+            </lightning-tab>
+        </lightning-tabset>
+    </lightning-card>
+</template>

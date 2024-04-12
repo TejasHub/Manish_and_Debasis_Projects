@@ -2,7 +2,6 @@
     <lightning-layout multiple-rows>
         <template for:each={properties} for:item="prop">
             <lightning-layout-item key={prop.Id} size="6" padding="around-small">
-                <!--<lightning-layout key={prop.Id} multiple-rows>-->
                     <div key={prop.Id} class="slds-box" style="width: 100%;background-color:white;">
                         <lightning-layout>
                             <lightning-layout-item size="4" padding="around-small" class="slds-align_absolute-center">
@@ -43,7 +42,6 @@
                             </lightning-layout-item>
                         </lightning-layout>
                     </div>
-                <!--</lightning-layout>-->
             </lightning-layout-item>
         </template>
     </lightning-layout>
@@ -59,8 +57,6 @@
                     </header>
                     <div class="slds-modal__content slds-p-around_medium">
                         <c-property-owner property-owner-id={propOwnerId}></c-property-owner>
-                        <!--<lightning-button variant="success" label="Cancel" class="slds-m-left_x-small"  onclick={closeOwnerModal}></lightning-button>                           -->
-                        <!--<lightning-button-icon class="slds-modal__close" icon-name="utility:close" onclick={closeOwnerModal}></lightning-button-icon>-->
                     </div>
                 </div>
             </section>

@@ -9,7 +9,8 @@
                 value={location}
                 placeholder="Select Locality"
                 field-level-help="Search Property based on Locality"
-                options={locationOptions}></lightning-combobox>
+                options={locationOptions}
+                onchange={handleLocationChange}></lightning-combobox>
             </div>
         </lightning-layout-item>
         <lightning-layout-item size="3" padding="around-small">
@@ -20,7 +21,8 @@
                 placeholder="Select" 
                 field-level-help="Search Property based on No of Bed room" 
                 value={noOfBedRoom} 
-                options={noOfBedRoomOptions}></lightning-combobox>
+                options={noOfBedRoomOptions}
+                onchange={handleBedRoomChange}></lightning-combobox>
             </div>
         </lightning-layout-item>
         <lightning-layout-item size="3" padding="around-small">
@@ -31,7 +33,8 @@
                 placeholder="Select" 
                 field-level-help="Search Property based on No of Bath room" 
                 value={noOfBathRoom} 
-                options={noOfBathRoomOptions}></lightning-combobox>
+                options={noOfBathRoomOptions}
+                onchange={handleBathRoomChange}></lightning-combobox>
             </div>
         </lightning-layout-item>
         <lightning-layout-item size="3" padding="around-small">
@@ -42,7 +45,8 @@
                 label="Maximum Budget"
                 value={maxBudget} 
                 field-level-help="Search Property based on the Budget" 
-                placeholder="Enter maximum Budget"></lightning-input>
+                placeholder="Enter maximum Budget"
+                onchange={handleBudgetChange}></lightning-input>
             </div>
         </lightning-layout-item>    
     </lightning-layout>    
